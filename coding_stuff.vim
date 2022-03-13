@@ -1,5 +1,5 @@
 nnoremap <leader>- ddp
-nnoremap <leader>_ ddkkp 
+nnoremap ;_ ddkkp 
 inoremap jk <esc>
 
 augroup java_code
@@ -11,11 +11,6 @@ augroup c_code
     autocmd!
     autocmd BufWritePre,BufRead *.cpp :normal gg=G
     autocmd BufWritePre,BufRead *.c :normal gg=G
-augroup END
-augroup assembly_code
-    autocmd!
-    autocmd BufWritePre,BufRead *.s :normal gg=G
-    autocmd FileType asm nnoremap <buffer> <leader>c I;<space><esc>
 augroup END
 augroup python_code
     autocmd!
