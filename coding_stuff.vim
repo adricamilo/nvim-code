@@ -1,4 +1,4 @@
-nnoremap <leader>- ddp
+nnoremap ,- ddp
 nnoremap ;_ ddkkp 
 inoremap jk <esc>
 
