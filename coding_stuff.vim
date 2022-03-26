@@ -23,6 +23,7 @@ augroup END
 augroup markdown_code
     autocmd!
     autocmd FileType markdown nnoremap <buffer> <leader>q I><space><esc>
+    autocmd FileType markdown set linebreak
 augroup END
 augroup tex_code
     autocmd!
@@ -32,4 +33,5 @@ augroup tex_code
     autocmd FileType tex inoremap <buffer> \bs \boldsymbol{}<left>
     autocmd FileType tex nnoremap <buffer> <leader>tf bveyPa<enter>\end{<esc>ea}<esc>k$a}<esc>bi\begin{<esc>2==o
     autocmd FileType tex nnoremap <buffer> <leader>ts bveyPa*<enter>\end{<esc>ea*}<esc>k$a}<esc>bbi\begin{<esc>2==o
+    autocmd FileType tex set linebreak
 augroup END
