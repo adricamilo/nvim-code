@@ -1,5 +1,8 @@
-nnoremap ,- ddp
-nnoremap ;_ ddkkp 
+nnoremap <C-Down> ddp
+nnoremap <C-Up> ddkkp 
+nnoremap <C-Left> :bn<CR> 
+nnoremap <C-Right> :bp<CR>
+
 inoremap jk <esc>
 
 augroup java_code
