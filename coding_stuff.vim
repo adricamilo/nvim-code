@@ -1,7 +1,7 @@
 nnoremap <C-Down> ddp
 nnoremap <C-Up> ddkkp 
-nnoremap <C-Left> :bn<CR> 
-nnoremap <C-Right> :bp<CR>
+nnoremap <C-Left> :bp<CR> 
+nnoremap <C-Right> :bn<CR>
 
 inoremap jk <esc>
 
