@@ -23,7 +23,9 @@ augroup END
 augroup markdown_code
     autocmd!
     autocmd FileType markdown nnoremap <buffer> <leader>q I><space><esc>
-    autocmd FileType markdown setlocal linebreak
+    autocmd FileType markdown nmap <silent> <leader>m :call CompileWithMarked() <CR><CR>
+" must be edited according to the specific screen size
+    autocmd FileType markdown setlocal textwidth=65
 augroup END
 augroup tex_code
     autocmd!
@@ -31,8 +33,13 @@ augroup tex_code
     autocmd FileType tex inoremap <buffer> \frac \frac{}{}<left><left><left>
     autocmd FileType tex inoremap <buffer> \nice \nicefrac{}{}<left><left><left>
     autocmd FileType tex inoremap <buffer> \bs \boldsymbol{}<left>
+    autocmd FileType tex inoremap <buffer> \lstin \lstinline[columns=fixed]
     autocmd FileType tex nnoremap <buffer> <leader>tf bveyPa<enter>\end{<esc>ea}<esc>k$a}<esc>bi\begin{<esc>2==o
     autocmd FileType tex nnoremap <buffer> <leader>ts bveyPa*<enter>\end{<esc>ea*}<esc>k$a}<esc>bbi\begin{<esc>2==o
     autocmd FileType tex nnoremap <buffer> <leader>c I%<space><esc>
-    autocmd FileType tex setlocal linebreak
+    autocmd FileType tex nmap <silent> <leader>l :call CompileWithLuaLaTeX() <CR>
+    autocmd FileType tex nmap <silent> <leader>b :call CompileWithBiber() <CR>
+    autocmd FileType tex nmap <silent> <leader>f :call CompileFullWithBiber() <CR>
+" must be edited according to the specific screen size
+    autocmd FileType tex setlocal textwidth=65
 augroup END
