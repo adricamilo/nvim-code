@@ -1,5 +1,5 @@
 nnoremap <C-Down> ddp
-nnoremap <C-Up> ddkkp 
+nnoremap <C-Up> ddkP
 nnoremap <C-Left> :bp<CR> 
 nnoremap <C-Right> :bn<CR>
 
@@ -37,9 +37,6 @@ augroup tex_code
     autocmd FileType tex nnoremap <buffer> <leader>tf bveyPa<enter>\end{<esc>ea}<esc>k$a}<esc>bi\begin{<esc>2==o
     autocmd FileType tex nnoremap <buffer> <leader>ts bveyPa*<enter>\end{<esc>ea*}<esc>k$a}<esc>bbi\begin{<esc>2==o
     autocmd FileType tex nnoremap <buffer> <leader>c I%<space><esc>
-    autocmd FileType tex nmap <silent> <leader>l :call CompileWithLuaLaTeX() <CR>
-    autocmd FileType tex nmap <silent> <leader>b :call CompileWithBiber() <CR>
-    autocmd FileType tex nmap <silent> <leader>f :call CompileFullWithBiber() <CR>
-" must be edited according to the specific screen size
+    " must be edited according to the specific screen size
     autocmd FileType tex setlocal textwidth=65
 augroup END
